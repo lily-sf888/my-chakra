@@ -1,0 +1,36 @@
+<!-- views/pages/login.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+    <header>
+        <% include ../partials/header %>
+    </header>
+    
+    <main>
+            <div class="col-sm-6 col-sm-offset-3">
+            <h1 class="register"><span class="fa fa-sign-in"></span> Login</h1>
+            
+            <!-- LOGIN FORM -->
+            <form action="/login" method="post">
+                <div class="form-group register">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="name">
+                </div>
+                <div class="form-group register">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password">
+                </div>
+                <button type="submit" class="btn btn-warning btn-lg">Login</button>
+            </form>
+            <hr>
+            <p class="register">Need an account? <a href="/">Signup</a></p>
+        </div>
+    </main>
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+</body>
+</html>

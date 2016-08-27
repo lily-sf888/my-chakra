@@ -1,0 +1,39 @@
+<!-- views/signup.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+    <header>
+        <% include ../partials/header %>
+    </header>
+    
+    <main>
+        <h1 class="title register">Know Your Chakras</h1>
+        <p id="subtitle">Meditate with your chakras and achieve more balance in your life.</p>
+        <div class="col-sm-6 col-sm-offset-3">
+            <h2 class="register"><span class="fa fa-sign-in"></span> Register</h2>
+            <!-- REGISTER FORM -->
+            <form action="/signup" method="post">
+                <div class="form-group register">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="name">
+                </div>
+                <div class="form-group register">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password">
+                </div>
+                <button type="submit" class="btn btn-warning btn-lg">Register</button>
+            </form>
+            <hr>
+            <p class="register">Already have an account? <a href="/login">Login</a></p>
+        </div>
+                    
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+</body>
+</html>
