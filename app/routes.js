@@ -33,4 +33,8 @@ module.exports = function(app, passport) {
     app.get('/love', function(req, res) {
         res.render('pages/love.ejs', {user: user});
     })
+    
+    app.get('/root', function(req, res) {
+        res.render('pages/root.ejs');
+    })
 };
