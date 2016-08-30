@@ -13,7 +13,8 @@ module.exports  = {
             yoga: "One of the yoga poses that connects you to your root chakra is the tree pose. Get on your yoga" + 
             " mat. Do the tree pose. Take deep breaths in and out five to eight times, then switch legs.",
             yogaImage: "tree-pose.png"
-    },
+        },
+    
         sacral: {
             title: "Sacral",
             description: "The sacral chakra’s element is water and associated with our emotional responses and regulation.",
@@ -26,6 +27,7 @@ module.exports  = {
             " the cobra pose. Close your eyes and imagine the orange rotating light that connects you to your sacral chakra.",
             yogaImage: "cobra-pose.png"
         },
+        
         solarplexus: {
             title: "Solar Plexus",
             description: "The solar plexus chakra is energized by the sun and the element of this chakra" +
@@ -41,6 +43,7 @@ module.exports  = {
             yogaImage: "boat-pose.png"
             
         },
+        
         heart: {
             title: "Heart",
             description: "The heart chakra's element is air and it is related to our ability to have unconditional" +
@@ -54,5 +57,48 @@ module.exports  = {
             " the bridge pose.  Hold it for five to eight breaths.",
             yogaImage: "bridge-pose.png"
         },
+        
+        throat: {
+            title: "Throat",
+            description: "When the throat chakra is in balance we have easy flow of energy within body and" +
+            " spirit. We can communicate our ideas, beliefs, and emotions and bring our personal truth into the world.",
+            location: "Hollow of the collarbone",
+            color: "Blue",
+            affects: " Self expression, communication, will",
+            meditation: " Go ahead and call a good friend or family member just to say hello, and show them that you care." +
+            " This person will appreciate that you thought of them, and you will feel good about reaching out.",
+            yoga: "The fish pose can help open and strengthen your throat chakra. Get on your mat, and do the fish pose." +
+            " Hold it for five to eight breaths.",
+            yogaImage: "fish-pose.png"
+        },
+        
+        thirdeye: {
+            title: "Third Eye",
+            description: "The function of the third eye chakra is driven by the principle of openness and imagination.",
+            location: "On the forehead between the eyebrows",
+            color: "Indigo",
+            affects: " Vision, intuition, motivates inspiration and creativity",
+            meditation: " Get yourself in a calm and relaxed state. Focus on energy coming up through your feet with each inhale." +
+            " Bring this energy up through each of the five previous chakras, and last bring that energy up to the center" +
+            " of the forehead. Imagine a purple energy ball growing larger and larger on your forehead with each inhale." +
+            " Continue this meditation until you feel a tingling sensation or warmth on the center of your forehead.",
+            yoga: "The downward facing dog pose can help with opening up the third eye chakra. Get in the pose" +
+            " and stay there anywhere from one to three minutes.",
+            yogaImage: "downdog-pose.png"
+        },
+        
+        crown: {
+            title: "Crown",
+            description: "The crown chakra is the center for deeper connection with ourselves and deeper connection" +
+            " with a force of life that is greater than us.",
+            location: "Top of the head",
+            color: "Violet",
+            affects: " Trust, devotion, connection with the divine",
+            meditation: " One way to open up the crown chakra is with positive affirmations. For example say the" +
+            " following affirmation: 'I go beyond limiting beliefs, I am one with ALL.'",
+            yoga: "The warrior III pose can help bring you closer to your crown chakra. Once you're in the pose" +
+            " look down on the floor and stare at a point for balance.  Hold for two to six breaths.",
+            yogaImage: "warrior-pose.png"
+        }
     }
 };
