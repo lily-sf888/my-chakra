@@ -1,18 +1,11 @@
 //need all of the chakras
-var user = {
-    name: "paul",
-    chakras: {
-        //needs input field data stored in objects for the three questions
-        love: "love is all you need",
-        peace: "peace"
-    }
-};
+var user = require("./models/chakras.js");
 
 module.exports = function(app, passport) {
     
     //setting up our home page which is the signup page
     app.get('/', function(req, res) {
-        res.render('pages/signup.ejs', {user: user}); //load the signup.ejs file
+        res.render('pages/signup.ejs'); //load the signup.ejs file
         
     });
     
@@ -29,9 +22,10 @@ module.exports = function(app, passport) {
     app.get('/mychakras', function(req, res) {
         res.render('pages/mychakras.ejs');
     })
-    
-    app.get('/love', function(req, res) {
-        res.render('pages/love.ejs', {user: user});
+    //creating chakras pages dynamically
+    app.get('/mychakras/:chakra', function(req, res) {
+        user.current = req.params.chakra;
+        res.render('pages/chakra.ejs', {user: user});
     })
     
     app.get('/root', function(req, res) {
