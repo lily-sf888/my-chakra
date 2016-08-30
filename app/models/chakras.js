@@ -1,3 +1,4 @@
+//strings are being stored here and different parts injected into template chakra.ejs
 module.exports  = {
     chakras: {
         root: {
