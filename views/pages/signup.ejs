@@ -13,6 +13,12 @@
         <p id="subtitle">Meditate with your chakras and achieve more balance in your life.</p>
         <div class="col-sm-6 col-sm-offset-3">
             <h2 class="register"><span class="fa fa-sign-in"></span> Register</h2>
+            
+            <!-- show any messages that come back with authentication -->
+            <% if (message.length > 0) { %>
+                <div class="alert alert-danger"><%= message %></div>
+            <% } %>
+            
             <!-- REGISTER FORM -->
             <form action="/signup" method="post">
                 <div class="form-group register">

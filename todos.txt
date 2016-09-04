@@ -1,3 +1,36 @@
+Must Dos
 -catch all route that redirects the user back to the homepage
 -testing for all the routes
+-store all the info user put in chakras, and know how to retrieve it
 
+Nice to haves
+-socket.io, show which user is connected
+
+Front End
+- click handler on new button
+    - attach the current chakra (love, etc) to data object (user.current)
+    - attach info collected from form to data object of AJAX request (POST)
+    - this will just be one object in the form:
+            var love = {
+                field1: "text goes here",
+                field2: "text goes here",
+                field3: "text goes here"
+            }
+    - then build up a data object to send in the request along the lines of:
+            var data = {
+                current: user.current, (might have to collect this via a jQuery selector)
+                chakra: love (the object we retrieved above)
+            }
+    
+Back End
+- set up new POST route to /update-chakra
+    - Use mongoose method, findByIDAndUpdate (use the id from req.user._id)
+    - Use this to update the data model for the specified user, so attach the love 
+    object we created to the user
+    - eg. user.love = { } (the object we have collected)
+
+- on GET request to /mychakras/:chakra
+    - retieve all data from req.user (for /love it should be at user.love)
+    - use that to populate (.val()) the textareas
+    
+    
