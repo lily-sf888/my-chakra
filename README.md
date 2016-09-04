@@ -12,5 +12,5 @@ separate text input fields.
 The data from the three text input fields gets stored inside an object along with the 
 user's name and password information.  We use the mongoose method 'findByIdAndUpdate' to
 update our database with the user's input information.  A response gets send to the
-front-end and updates it so that when user logs in next time, they can see their 
+front-end and updates it so that when users log in next time, they can see their 
 input about the chakra saved from last time.
