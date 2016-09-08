@@ -1,7 +1,7 @@
 //need all of the chakras
-var chakrasData = require("./models/chakras.js");
-var User = require("./models/user.js");
-
+var chakrasData = require("./models/chakras");
+var User = require("./models/user");
+var IndChakra = require("./models/indChakra");
 // hard code in your user under a variable name
 
 
@@ -27,7 +27,7 @@ module.exports = function(app, passport) {
     
     // process the login form
     app.post('/login', passport.authenticate('local-login', {
-        successRedirect : '/mychakras', // redirect to the secure profile section
+        successRedirect : '/mychakras/crown', // redirect to the secure profile section
         failureRedirect : '/login', // redirect back to the signup page if there is an error
         failureFlash : true // allow flash messages
     }));
@@ -40,31 +40,50 @@ module.exports = function(app, passport) {
     //process AJAX request
     // Do me first!!!!
     app.post('/update-chakra', function(req, res) {
-        var id = req.user._id;
-        console.log('update:', req.body);
-        console.log('user', req.user);
-        req.user.chakras = "hello";
         
-        // req.user = {
-        //      // a bunch of other data
-        //      chakras: {  // 
-        //          crown: {
-        //              // all user data for ind chakras
-        //          }
-        //       }
-        //     }
-        
-        console.log("Updated Object:", req.user)
-
-
-        User.findByIdAndUpdate(id, req.user, {new: true}, function(updatedUser) {
-            console.log(updatedUser);
-        })
-        //update database
+        if(req.user) {
+            var id = req.user._id;
+            var current = req.body.current;
+            
+            var options = {
+                new: true,
+                upsert: true
+            }
+            
+            IndChakra.findOne({name: id}).lean().exec(function (err, mainObj) {
+                if (err) console.error(err)
+                
+                if(!mainObj) {
+                    
+                    console.log("ID", id)
+                    
+                    var indCharkra = new IndChakra()
+                    indCharkra.name = id
+                    indCharkra.chakras = {}
+                    indCharkra.chakras[current] = req.body.userInput
+                    
+                    
+                    console.log('IND', indCharkra)
+                    
+                    
+                    indCharkra.save(function(err){
+                        if(err) console.error(err)
+                    })
+                    
+                } 
+                
+                else {
+                    console.log("bottom hi")
+                    
+                    mainObj.chakras[current] = req.body.userInput
+                    IndChakra.update({name: id}, mainObj, function(err, upDated){
+                        if(err) console.error("ERROR", err)
+                        console.log("UPDATED", mainObj)
+                    });
+                }
+            });
+        }
     });
-    
-    
-    
     
     //creating the seven different chakras pages dynamically
     //  Do me SECOND!!!
@@ -83,7 +102,7 @@ module.exports = function(app, passport) {
     //logout user
     app.get('/logout', function(req, res) {
         req.logout();
-        res.redirect('/');
+        res.redirect('/login');
     });
 
 };

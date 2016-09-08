@@ -20,3 +20,29 @@ describe('signup page', function() {
         });
     });
 });
+
+//testing the login page exist
+describe('login page', function() {
+    it('exists', function(done) {
+       chai.request(app)
+       .get('/login')
+       .end(function (err, res) {
+            res.should.have.status(200);
+            res.should.be.ejs;
+           done();
+       });
+    });
+});
+
+//testing one of the individual chakra page exist
+describe('root page', function() {
+    it('exists', function(done) {
+       chai.request(app)
+       .get('/mychakras/root')
+       .end(function (err, res) {
+            res.should.have.status(200);
+            res.should.be.ejs;
+           done();
+       });
+    });
+});

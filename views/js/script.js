@@ -24,7 +24,7 @@ $(document).ready(function() {
     var getUserData = function(userInput) {
         data.current = currentChakra;
         data.userInput = userInput;
-        
+        console.log(data);
         //ajax request to update-chakra route
         $.ajax({
             type: "POST",

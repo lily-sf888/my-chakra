@@ -22,15 +22,5 @@ Front End
                 chakra: love (the object we retrieved above)
             }
     
-Back End
-- set up new POST route to /update-chakra
-    - Use mongoose method, findByIDAndUpdate (use the id from req.user._id)
-    - Use this to update the data model for the specified user, so attach the love 
-    object we created to the user
-    - eg. user.love = { } (the object we have collected)
-
-- on GET request to /mychakras/:chakra
-    - retieve all data from req.user (for /love it should be at user.love)
-    - use that to populate (.val()) the textareas
     
     
