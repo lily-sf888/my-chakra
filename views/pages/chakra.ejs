@@ -1,20 +1,11 @@
 <!--views/pages/chakra.ejs this is the template for all the seven different chakras, dynamic info is being injected from chakras.js -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- DO ME THIRD!! -->
-    <!-- set up variables for various parts of the object -->
-    <!-- var data = obj.chakras.data -->
-    <!-- var user = obj.user -->
-    
-    
-    <% include ../partials/head %>
-</head>
+<head><% include ../partials/head %></head>
 <body data-chakra=<%= user.current %>>
     <header>
         <% include ../partials/header-chakra %>
     </header>
-   
     <section class="title-container">
         <p class="chakra-title"><%= user.chakras[user.current].title %> Chakra</p>
         <img src="../img/<%= user.current %>.png" alt="root chakra" class=<%= user.current %> >
@@ -27,25 +18,20 @@
                 <li><strong>How it affects you:</strong><%= user.chakras[user.current].affects %></li>
             </ul>
             <p><strong><%= user.chakras[user.current].title %> Chakra Meditation:</strong><%= user.chakras[user.current].meditation %></p>
-            
-            
-            
-            <div class="form-group">
-              <label for="comment">Did you connect with your chakra doing the exercise? Write down your thoughts here:</label>
-              <textarea class="form-control" rows="5" id="comment-one">Hello</textarea>
-            </div>
+        <div class="form-group">
+          <label for="comment">Did you connect with your chakra doing the exercise? Write down your thoughts here:</label>
+          <textarea class="form-control" rows="5" id="comment-one"><%= user.inputs.chakras[user.current ]? user.inputs.chakras[user.current].textOne : "" %></textarea>
+        </div>
             <p><%= user.chakras[user.current].yoga %><img src="../img/<%= user.chakras[user.current].yogaImage %>" alt="yoga pose"></p>
             <div class="form-group">
               <label for="comment">Write down any relieve or tensions you felt on your body doing this pose:</label>
-              <textarea class="form-control" rows="5" id="comment-two">Two</textarea>
+              <textarea class="form-control" rows="5" id="comment-two"><%= user.inputs.chakras[user.current]? user.inputs.chakras[user.current].textTwo : "" %></textarea>
             </div>
             <div class="form-group">
               <label for="comment">My lessons learned today about this chakra:</label>
-              <textarea class="form-control" rows="5" id="comment-three">Three</textarea>
+              <textarea class="form-control" rows="5" id="comment-three"><%= user.inputs.chakras[user.current]? user.inputs.chakras[user.current].textThree : "" %></textarea>
             </div>
             <button type="button" class="btn btn-success">Submit</button>
-            
-            
         </div>
     <footer>
         <% include ../partials/footer %>

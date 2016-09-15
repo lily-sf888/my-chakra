@@ -46,3 +46,16 @@ describe('root page', function() {
        });
     });
 });
+
+//testing mychakras page
+describe('my chakras page', function() {
+    it('exists', function(done) {
+       chai.request(app)
+       .get('/mychakras')
+       .end(function (err, res) {
+            res.should.have.status(200);
+            res.should.be.ejs;
+           done();
+       });
+    });
+});
