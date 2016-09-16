@@ -23,4 +23,16 @@ Front End
             }
     
     
-    
+    app.get('/mychakras/:chakra', function(req, res) {
+        if(!req.user) res.redirect('/login');
+        //accessing current chakra page user is on
+        chakrasData.current = req.params.chakra;
+        //retrieve data from indChakras model (findOne)
+        IndChakra.findOne({name: req.user._id}).lean().exec(function (err, mainObj) {
+            if (err) console.error(err)
+            //attaching user text input for individual chakra
+            chakrasData.inputs = mainObj
+            
+            res.render('pages/chakra.ejs', {user: chakrasData});    
+        });
+    });

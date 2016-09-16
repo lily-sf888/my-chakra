@@ -53,21 +53,20 @@ module.exports = function(app, passport) {
     app.post('/update-chakra', function(req, res) {
         if(!req.user) res.redirect('/login');
         //if user exists access their key id and current chakra they're on
-        if(req.user) {
-            var id = req.user._id;
-            var current = req.body.current
-            //finding existing user in our database
-            IndChakra.findOne({name: id}).lean().exec(function (err, mainObj) {
-                if (err) console.error(err)
-                //adding user input to the current chakra user is on
-                mainObj.chakras[current] = req.body.userInput
-                //update our database with new user input
-                IndChakra.update({name: id}, mainObj, function(err, upDated){
-                    if(err) console.error("ERROR", err)
-                });
+        var id = req.user._id;
+        var current = req.body.current
+        //finding existing user in our database
+        IndChakra.findOne({name: id}).lean().exec(function (err, mainObj) {
+            if (err) console.error(err)
+            //adding user input to the current chakra user is on
+            mainObj.chakras[current] = req.body.userInput
+            //update our database with new user input
+            IndChakra.update({name: id}, mainObj, function(err, upDated){
+                if(err) console.error("ERROR", err)
             });
-        }
+        });
     });
+    
     //accessing the individual chakra pages which are generated dynamically
     app.get('/mychakras/:chakra', function(req, res) {
         if(!req.user) res.redirect('/login');
@@ -82,6 +81,7 @@ module.exports = function(app, passport) {
             res.render('pages/chakra.ejs', {user: chakrasData});    
         });
     });
+    
     //logout user
     app.get('/logout', function(req, res) {
         req.logout();
