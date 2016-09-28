@@ -31,7 +31,8 @@
               <label for="comment">My lessons learned today about this chakra:</label>
               <textarea class="form-control" rows="5" id="comment-three"><%= user.inputs.chakras[user.current]? user.inputs.chakras[user.current].textThree : "" %></textarea>
             </div>
-            <button type="button" class="btn btn-success">Submit</button>
+            
+            <button id="submitButton" type="button" class="btn btn-success">Submit</button>
         </div>
     <footer>
         <% include ../partials/footer %>

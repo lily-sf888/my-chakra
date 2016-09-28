@@ -2,7 +2,7 @@ $(document).ready(function() {
     //get current chakra
     var currentChakra = $('body').attr('data-chakra')
     //adding click event to submit button
-    $("button").on("click", function() {
+    $("#submitButton").on("click", function() {
         //get value from the three textarea input
         var textOne = $("#comment-one").val();
         var textTwo = $("#comment-two").val();
@@ -29,24 +29,13 @@ $(document).ready(function() {
             url: "/update-chakra",
             data: data,
             success: function(data) {
-                console.log(data);
+                toastr.options.preventDuplicates = true;
+                toastr.success('Your input is saved', 'Success!');
             },
             error: function(xhr, status, error) {
-                console.log(error);
+                
             },
             dataType: 'text'
-        });
-    
-     }
-    
-    
-    
-    
-       
-    
-    
-
-   
-
-    
+        });     
+    }
 });

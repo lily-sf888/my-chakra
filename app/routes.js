@@ -6,7 +6,6 @@ var User = require("./models/user");
 var IndChakra = require("./models/indChakra");
 
 module.exports = function(app, passport) {
-    
     //setting up our home page which is the signup page
     app.get('/', function(req, res) {
         res.render('pages/signup.ejs', { message: req.flash('signupMessage') }); //load the signup.ejs file
@@ -21,14 +20,12 @@ module.exports = function(app, passport) {
     app.get('/login', function(req, res) {
         res.render('pages/login.ejs', {message: req.flash('loginMessage')} );
     });
-    
     // process the login form
     app.post('/login', passport.authenticate('local-login', {
         successRedirect : '/mychakras', // redirect to the secure mychakras section
         failureRedirect : '/login', // redirect back to the signup page if there is an error
         failureFlash : true // allow flash messages
     }));
-
     //show my chakras page
     app.get('/mychakras', function(req, res) {
         if(!req.user) res.redirect('/login');
@@ -63,25 +60,25 @@ module.exports = function(app, passport) {
             //update our database with new user input
             IndChakra.update({name: id}, mainObj, function(err, upDated){
                 if(err) console.error("ERROR", err)
+                // send status code response
+                res.sendStatus(200);
             });
         });
     });
-    
     //accessing the individual chakra pages which are generated dynamically
     app.get('/mychakras/:chakra', function(req, res) {
         if(!req.user) res.redirect('/login');
         //accessing current chakra page user is on
         chakrasData.current = req.params.chakra;
+        
         //retrieve data from indChakras model (findOne)
         IndChakra.findOne({name: req.user._id}).lean().exec(function (err, mainObj) {
             if (err) console.error(err)
             //attaching user text input for individual chakra
             chakrasData.inputs = mainObj
-            
             res.render('pages/chakra.ejs', {user: chakrasData});    
         });
     });
-    
     //logout user
     app.get('/logout', function(req, res) {
         req.logout();
