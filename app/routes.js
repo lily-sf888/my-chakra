@@ -1,8 +1,8 @@
-//this stores the object containing strings describing the chakras
+//stores the object containing strings describing the chakras
 var chakrasData = require("./models/chakras");
-//importing model that stores the user name and password 
+//importing model that stores the user name and password
 var User = require("./models/user");
-//this model stores the three user inputs for each of the seven chakras
+//stores the three user inputs for each of the seven chakras
 var IndChakra = require("./models/indChakra");
 
 module.exports = function(app, passport) {
@@ -42,7 +42,7 @@ module.exports = function(app, passport) {
                 indChakra.save(function(err){
                     if(err) console.error(err);
                 });
-            } 
+            }
         });
         res.render('pages/mychakras.ejs');
     });
@@ -70,13 +70,13 @@ module.exports = function(app, passport) {
         if(!req.user) res.redirect('/login');
         //accessing current chakra page user is on
         chakrasData.current = req.params.chakra;
-        
+
         //retrieve data from indChakras model (findOne)
         IndChakra.findOne({name: req.user._id}).lean().exec(function (err, mainObj) {
             if (err) console.error(err)
             //attaching user text input for individual chakra
             chakrasData.inputs = mainObj
-            res.render('pages/chakra.ejs', {user: chakrasData});    
+            res.render('pages/chakra.ejs', {user: chakrasData});
         });
     });
     //logout user

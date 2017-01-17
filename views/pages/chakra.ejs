@@ -1,4 +1,4 @@
-<!--views/pages/chakra.ejs this is the template for all the seven different chakras, dynamic info is being injected from chakras.js -->
+<!--template for all seven different chakras, dynamic info is being injected from chakras.js -->
 <!DOCTYPE html>
 <html lang="en">
 <head><% include ../partials/head %></head>
@@ -9,7 +9,7 @@
     <section class="title-container">
         <p class="chakra-title"><%= user.chakras[user.current].title %> Chakra</p>
         <img src="../img/<%= user.current %>.png" alt="root chakra" class=<%= user.current %> >
-    </section>    
+    </section>
         <div class="container">
             <p class="description"><%= user.chakras[user.current].description %></p>
             <ul class="chakra-list">
@@ -31,7 +31,7 @@
               <label for="comment">My lessons learned today about this chakra:</label>
               <textarea class="form-control" rows="5" id="comment-three"><%= user.inputs.chakras[user.current]? user.inputs.chakras[user.current].textThree : "" %></textarea>
             </div>
-            
+
             <button id="submitButton" type="button" class="btn btn-success">Submit</button>
         </div>
     <footer>
