@@ -5,7 +5,7 @@ var app = express();
 var port = process.env.PORT || 8080
 var mongoose = require('mongoose');
 var flash = require('connect-flash');
-
+var http = require('http');
 var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -17,6 +17,10 @@ var configDB = require('./config/database.js');
 mongoose.connect(configDB.url); //connect to our database
 
 require('./config/passport')(passport); //pass passport for configuration
+
+setInterval(function() {
+  http.get('https://agile-springs-89459.herokuapp.com');
+}, 300000);//pings heroku every 5 minutes
 
 //set up static files
 app.use(express.static('views'));
