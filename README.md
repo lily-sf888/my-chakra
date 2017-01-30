@@ -1,5 +1,12 @@
 ##My Chakras
 
+My Chakras guides the user through meditation and yoga poses, the users are also
+able to write about their experience doing the exercises and save them for future
+reference.
+
+<img src="chakra-demo.png" alt="chakra demo" />   <img src="chakra-demo1.png" alt="chakra demo"/>
+
+
 ###Tech Stack
 
 * Passport Authentication
