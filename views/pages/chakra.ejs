@@ -17,19 +17,26 @@
                 <li><strong>Color:</strong> <%= user.chakras[user.current].color %></li>
                 <li><strong>How it affects you:</strong><%= user.chakras[user.current].affects %></li>
             </ul>
+
             <p><strong><%= user.chakras[user.current].title %> Chakra Meditation:</strong><%= user.chakras[user.current].meditation %></p>
         <div class="form-group">
           <label for="comment">Did you connect with your chakra doing the exercise? Write down your thoughts here:</label>
-          <textarea class="form-control" rows="5" id="comment-one"><%= user.inputs.chakras[user.current ]? user.inputs.chakras[user.current].textOne : "" %></textarea>
+          <textarea class="form-control" rows="5" id="comment-one"></textarea>
+          <p id="entry-one">Previous entry:
+            <%= user.inputs.chakras[user.current] ? user.inputs.chakras[user.current].textOne : "" %> </p>
         </div>
             <p><%= user.chakras[user.current].yoga %><img src="../img/<%= user.chakras[user.current].yogaImage %>" alt="yoga pose"></p>
             <div class="form-group">
               <label for="comment">Write down any relieve or tensions you felt on your body doing this pose:</label>
-              <textarea class="form-control" rows="5" id="comment-two"><%= user.inputs.chakras[user.current]? user.inputs.chakras[user.current].textTwo : "" %></textarea>
+              <textarea class="form-control" rows="5" id="comment-two"></textarea>
+              <p id="entry-two">Previous entry:
+                <%= user.inputs.chakras[user.current]? user.inputs.chakras[user.current].textTwo : "" %></p>
             </div>
             <div class="form-group">
               <label for="comment">My lessons learned today about this chakra:</label>
-              <textarea class="form-control" rows="5" id="comment-three"><%= user.inputs.chakras[user.current]? user.inputs.chakras[user.current].textThree : "" %></textarea>
+              <textarea class="form-control" rows="5" id="comment-three"></textarea>
+              <p id="entry-three">Previous entry:
+                <%= user.inputs.chakras[user.current]? user.inputs.chakras[user.current].textThree : "" %></p>
             </div>
 
             <button id="submitButton" type="button" class="btn btn-success">Submit</button>

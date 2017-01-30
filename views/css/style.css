@@ -16,7 +16,7 @@ html {
 
 #logo {
     float: left;
-    width: 60%;
+    width: 20%;
 }
 
 #logo-img {
@@ -103,7 +103,8 @@ footer {
     margin: auto;
     width: 50%;
     color: #A9A9A9;
-    font-size: 17px;
+    font-size: 19px;
+    font-weight: 200;
 }
 
 #container-table {
@@ -128,7 +129,7 @@ footer {
 .title-container img {
     width: 50%;
     height: auto;
-  
+
 }
 
 .chakra-title  {
@@ -139,7 +140,7 @@ footer {
 }
 
 .description {
-   
+
     margin-top: 30px;
 }
 
@@ -152,4 +153,31 @@ footer {
     float: left;
     width: 60%;
     padding-left: 10px;
+}
+
+#how-to {
+  color: white;
+  font-size: 25px;
+  font-weight: lighter;
+  cursor: help;
+  padding-left: 25px;
+
+}
+
+#how-to:hover {
+  color: #cc66ff;
+}
+
+#entry-one, #entry-two, #entry-three {
+  color: white;
+}
+
+#demo {
+  color: white;
+  width: 70%;
+  text-align: center;
+}
+
+.footer-position {
+  padding-left: 20px;
 }

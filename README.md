@@ -1,4 +1,4 @@
-##My Chakra App
+##My Chakras
 
 ###Tech Stack
 
@@ -9,7 +9,7 @@
 * Travis CI
 * Heroku
 
-[My Chakra App](https://agile-springs-89459.herokuapp.com/) let's the user register
+[My Chakras](https://agile-springs-89459.herokuapp.com/) let's the user register
 and login using passport authentication methods. The user's name and password information
 is stored inside the mongodb database which is hosted by mLab.  Once the users are logged in they
 can choose which chakra meditation to try by clicking on one of the chakra links.
