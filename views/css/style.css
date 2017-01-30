@@ -25,9 +25,10 @@ html {
 
 #login {
     float: right;
-    font-size: 15px;
+    font-size: 27px;
     margin-top: 40px;
     margin-right: 40px;
+    font-weight: lighter;
 }
 
 .main-login {
