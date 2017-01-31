@@ -100,7 +100,7 @@ module.exports  = {
             "energy to that person. After a few minutes think about someone you have difficult feelings" +
             "for and as best as you can send them love too. Lastly think of the people in your community" +
             "and send them your good wishes. When we change focus from ourselves to the people around us" +
-            "we feel lighter and a sense of connectedness that brings more peace and joy into our lives." +
+            "we feel lighter and a sense of connectedness that brings more peace and joy into our lives.", 
             yoga: "The warrior III pose can help bring you closer to your crown chakra. Once you're in the pose" +
             " look down on the floor and stare at a point for balance.  Hold for two to six breaths.",
             yogaImage: "warrior-pose.png"
