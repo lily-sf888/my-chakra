@@ -16,7 +16,7 @@ reference.
 There's no doubt that our recent technological advancements have allowed us to stay
 better connected and made our lives easier in many ways. But when we constantly
 focus on a device instead of ourselves and what's going on around us we miss a
-great deal. Whether one believes in chakras or not, this app can be useful to
+great deal. Whether one believes in chakras or not, this app can be used by
 anyone who wants to achieve more balance in mind and body through meditation and
 yoga.
 
@@ -24,7 +24,7 @@ My chakras is the perfect tool for users to become more familiar with the seven
 chakras. Each chakra focuses on different parts of us, and we can do meditation
 and yoga stretches to focus and unblock energies on these parts. Users are then able
 to write about what they learned about the chakra. This app is useful for anyone
-who wants to achieve more balance between mind and body.
+who wants to have more balance in their lives.
 
 ##UX
 
@@ -32,11 +32,26 @@ The initial wireframes can be seen below:
 
  <img src="wireframe.png" alt="wireframe" />    <img src="wireframe1.png" alt="wireframe"/>
 
+After the users log in, they land on the home page where the seven chakras are
+displayed. On the left there's a 'How To' link that tells the
+user how to proceed with the app. When the users click on one of the chakras,
+they land on the chosen chakra's page. Followed by a short description of the chakra
+are three input fields where users can write about their experience.
 
+When they hit the submit button, their input is saved and appears in a paragraph
+below the input field. This paragraph gets replaced every time the user enters
+new input.
+
+##Working Prototype
+
+For a working demo of the app go [here](https://agile-springs-89459.herokuapp.com/).
+
+Technical
 
 ###Tech Stack
 
 * Passport Authentication
+* EJS Templating
 * MongoDB
 * Mongoose
 * Mocha Testing
@@ -44,20 +59,10 @@ The initial wireframes can be seen below:
 * Heroku
 
 [My Chakras](https://agile-springs-89459.herokuapp.com/) let's the user register
-and login using passport authentication methods. The user's name and password information
-is stored inside the mongodb database which is hosted by mLab.  Once the users are logged in they
-can choose which chakra meditation to try by clicking on one of the chakra links.
+and login using passport authentication methods. The user's name, password and input information are stored inside the mongoDB database which is hosted by mLab. The pages of this app are written in EJS, a templating language where between <% %> JavaScript is executed.
 
-This brings the users to the individual chakra page, from there they are asked to
-do a meditation and yoga pose.  They are asked to write down their experiences in three
-separate text input fields.
-
-The data from the three text input fields gets stored inside an object along with the
-user's name and password information.  We use different mongoose methods to save, find and
-update our database with the user's input information.  A response gets send to the
-front-end and updates it so that when users log in next time, they can see their
-input about the chakra saved from last time.
+After users enter their info and hit the submit button, data from the three
+input fields get stored inside an object along with the user's name and password. We use different mongoose methods to save, find and update our database with the user's input. A response gets send to the front-end and updates it so that when users log in next time, they can see their input saved in a paragraph below the input fields. The text of this paragraph gets replaced every time our users enter new information.
 
 Testing is done through Mocha, which in combination with Travis CI allows for continuous
-testing.  Every time we push up to github, Travis CI automatically runs mocha and deploys
-directly to Heroku only if all the tests pass.
+deployment.  Every time we push up to Github, Travis CI automatically runs mocha and deploys directly to Heroku only if all the tests pass.
