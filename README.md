@@ -62,7 +62,7 @@ Technical
 and login using passport authentication methods. The user's name, password and input information are stored inside the mongoDB database which is hosted by mLab. The pages of this app are written in EJS, a templating language where between <% %> JavaScript is executed.
 
 After users enter their info and hit the submit button, data from the three
-input fields get stored inside an object along with the user's name and password. We use different mongoose methods to save, find and update our database with the user's input. A response gets send to the front-end and updates it so that when users log in next time, they can see their input saved in a paragraph below the input fields. The text of this paragraph gets replaced every time our users enter new information.
+input fields get stored inside an object along with the user's name and password. We use different mongoose methods to save, find and update our database with the user's input. A response gets send to the front-end and updates it. When users log in next time, they can see their input saved in a paragraph below the input fields. The text of this paragraph gets replaced every time our users enter new information.
 
 Testing is done through Mocha, which in combination with Travis CI allows for continuous
 deployment.  Every time we push up to Github, Travis CI automatically runs mocha and deploys directly to Heroku only if all the tests pass.
