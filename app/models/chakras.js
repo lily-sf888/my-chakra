@@ -94,8 +94,13 @@ module.exports  = {
             location: "Top of the head",
             color: "Violet",
             affects: " Trust, devotion, connection with the divine",
-            meditation: " One way to open up the crown chakra is with positive affirmations. For example say the" +
-            " following affirmation: 'I go beyond limiting beliefs, I am one with ALL.'",
+            meditation: "The crown is the top chakra of the seven and it reminds us of our" +
+            "connection to every being on the planet. Close your eyes and just focus on your" +
+            "breathing for a while. Then think about someone you care about a lot and send loving" +
+            "energy to that person. After a few minutes think about someone you have difficult feelings" +
+            "for and as best as you can send them love too. Lastly think of the people in your community" +
+            "and send them your good wishes. When we change focus from ourselves to the people around us" +
+            "we feel lighter and a sense of connectedness that brings more peace and joy into our lives." +
             yoga: "The warrior III pose can help bring you closer to your crown chakra. Once you're in the pose" +
             " look down on the floor and stare at a point for balance.  Hold for two to six breaths.",
             yogaImage: "warrior-pose.png"
