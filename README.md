@@ -46,7 +46,7 @@ new input.
 
 For a working demo of the app go [here](https://agile-springs-89459.herokuapp.com/).
 
-Technical
+##Technical
 
 ###Tech Stack
 
