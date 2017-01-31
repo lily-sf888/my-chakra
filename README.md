@@ -20,17 +20,15 @@ great deal. Whether one believes in chakras or not, this app can be used by
 anyone who wants to achieve more balance in mind and body through meditation and
 yoga.
 
-My chakras is the perfect tool for users to become more familiar with the seven
-chakras. Each chakra focuses on different parts of us, and we can do meditation
-and yoga stretches to focus and unblock energies on these parts. Users are then able
-to write about what they learned about the chakra. This app is useful for anyone
-who wants to have more balance in their lives.
-
 ##UX
 
 The initial wireframes can be seen below:
 
  <img src="wireframe.png" alt="wireframe" />    <img src="wireframe1.png" alt="wireframe"/>
+
+My Chakras has been designed to give the user a sense of serenity by choosing a
+darker, gradient background in order to make the colorful images of the chakras
+pop more. Keeping the app simple and easy to use was the overall goal.
 
 After the users log in, they land on the home page where the seven chakras are
 displayed. On the left there's a 'How To' link that tells the
