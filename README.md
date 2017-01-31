@@ -1,10 +1,37 @@
 ##My Chakras
 
-My Chakras guides the user through meditation and yoga poses, the users are also
+This app uses Express.js, a Node.js framework, for its backend and MongoDB for
+database storage. Users are able to record their input and save them in the database.
+
+<img src="chakra-demo.png" alt="chakra demo" />    <img src="chakra-demo1.png" alt="chakra demo"/>
+
+##Overview
+
+My Chakras guides the user through meditation and yoga poses, they are also
 able to write about their experience doing the exercises and save them for future
 reference.
 
-<img src="chakra-demo.png" alt="chakra demo" />    <img src="chakra-demo1.png" alt="chakra demo"/>
+##Use Case
+
+There's no doubt that our recent technological advancements have allowed us to stay
+better connected and made our lives easier in many ways. But when we constantly
+focus on a device instead of ourselves and what's going on around us we miss a
+great deal. Whether one believes in chakras or not, this app can be useful to
+anyone who wants to achieve more balance in mind and body through meditation and
+yoga.
+
+My chakras is the perfect tool for users to become more familiar with the seven
+chakras. Each chakra focuses on different parts of us, and we can do meditation
+and yoga stretches to focus and unblock energies on these parts. Users are then able
+to write about what they learned about the chakra. This app is useful for anyone
+who wants to achieve more balance between mind and body.
+
+##UX
+
+The initial wireframes can be seen below:
+
+ <img src="wireframe.png" alt="wireframe" />    <img src="wireframe1.png" alt="wireframe"/>
+
 
 
 ###Tech Stack
