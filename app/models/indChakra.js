@@ -19,27 +19,27 @@ var indChakra = new Schema({
             textOne: { type: String, default: ''},
             textTwo: { type: String, default: ''},
             textThree: { type: String, default: ''}
-        }, 
+        },
         solarplexus: {
             textOne: { type: String, default: ''},
             textTwo: { type: String, default: ''},
             textThree: { type: String, default: ''}
-        }, 
+        },
         throat: {
             textOne: { type: String, default: ''},
             textTwo: { type: String, default: ''},
             textThree: { type: String, default: ''}
-        }, 
+        },
         crown: {
             textOne: { type: String, default: ''},
             textTwo: { type: String, default: ''},
             textThree: { type: String, default: ''}
-        }, 
+        },
         root: {
             textOne: { type: String, default: ''},
             textTwo: { type: String, default: ''},
             textThree: { type: String, default: ''}
-        }, 
+        },
     }
 });
 //passing mongoose schema as an argument

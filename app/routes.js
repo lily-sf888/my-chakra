@@ -76,6 +76,7 @@ module.exports = function(app, passport) {
             if (err) console.error(err)
             //attaching user text input for individual chakra
             chakrasData.inputs = mainObj
+            //pass in whole array instead of just chakrasData
             res.render('pages/chakra.ejs', {user: chakrasData});
         });
     });
