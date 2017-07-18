@@ -1,17 +1,17 @@
-##My Chakras
+## My Chakras
 
 This app uses Express.js, a Node.js framework, for its backend and MongoDB for
 database storage. Users are able to record their input and save them in the database.
 
 <img src="chakra-demo.png" alt="chakra demo" />    <img src="chakra-demo1.png" alt="chakra demo"/>
 
-##Overview
+## Overview
 
 My Chakras guides the user through meditation and yoga poses, they are also
 able to write about their experience doing the exercises and save them for future
 reference.
 
-##Use Case
+## Use Case
 
 There's no doubt that our recent technological advancements have allowed us to stay
 better connected and made our lives easier in many ways. But when we constantly
@@ -20,7 +20,7 @@ great deal. Whether one believes in chakras or not, this app can be used by
 anyone who wants to achieve more balance in mind and body through meditation and
 yoga.
 
-##UX
+## UX
 
 The initial wireframes can be seen below:
 
@@ -40,13 +40,13 @@ When they hit the submit button, their input is saved and appears in a paragraph
 below the input field. This paragraph gets replaced every time the user enters
 new input.
 
-##Working Prototype
+## Working Prototype
 
 For a working demo of the app go [here](https://agile-springs-89459.herokuapp.com/).
 
-##Technical
+## Technical
 
-###Tech Stack
+### Tech Stack
 
 * Passport Authentication
 * EJS Templating
